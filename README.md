@@ -1,10 +1,12 @@
 ## Redis Streams demo: [React.Js + TypeScript + Node.js] + [SpringBoot + Firebase] + [Python]
+<<<<<<< HEAD
 
 <div align="center">
   <img  width="60%" 
     src="https://github.com/gustavoramosdesousa/redis-stream-demo/blob/main/images/redis-stream-demo.png" alt="redis-arch" />
   <p>Arquitetura da Demonstração</p>
 </div>
+
 
 ### Sobre o projeto
 <em_breve_DESCRICAO_DO_PROJETO>
