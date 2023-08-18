@@ -1,7 +1,7 @@
 ## Redis Streams demo: [React.Js + TypeScript + Node.js] + [SpringBoot + Firebase] + [Python]
 
 <div align="center">
-  <img  width="60%" 
+  <img  width="70%" 
     src="https://github.com/gustavoramosdesousa/redis-stream-demo/blob/main/images/redis-stream-demo.png" alt="redis-arch" />
   <p>Arquitetura da Demonstração</p>
 </div>
