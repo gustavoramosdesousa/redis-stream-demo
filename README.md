@@ -34,7 +34,15 @@ Trata-se de uma aplicação de demonstração que se propõe a integrar os servi
 Este projeto possui três partes:
 - Producer: apartir da raiz `"redis-stream-demo/"`, acessar `"redis-stream-demo/js-redis-producer/"`
 ```bash
-cd  .\js-producer\
+#terminal 01
+cd  .\js-redis-producer\server\
+yarn install
+yarn dev
+```
+```bash
+#terminal 02
+cd  .\js-redis-producer\
+yarn install
 yarn dev
 ```
 Mais detalhes [aqui](https://github.com/gustavoramosdesousa/redis-stream-demo/tree/main/js-redis-producer).
@@ -42,7 +50,7 @@ Mais detalhes [aqui](https://github.com/gustavoramosdesousa/redis-stream-demo/tr
 - Consumer 01: apartir da raiz `"redis-stream-demo/"`, acessar `"redis-stream-demo/java-redis-consumer/"`
 ```bash
 cd  .\java-redis-consumer\
-yarn dev
+
 ```
 Mais detalhes [aqui](https://github.com/gustavoramosdesousa/redis-stream-demo/tree/main/java-redis-consumer).
 

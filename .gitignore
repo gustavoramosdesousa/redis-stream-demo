@@ -1,1 +1,2 @@
 python-redis-consumer/**
+js-redis-producer/server/node_modules**
