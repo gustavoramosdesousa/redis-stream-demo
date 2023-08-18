@@ -1,5 +1,4 @@
 ## Redis Streams demo: [React.Js + TypeScript + Node.js] + [SpringBoot + Firebase] + [Python]
-<<<<<<< HEAD
 
 <div align="center">
   <img  width="60%" 
