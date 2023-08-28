@@ -36,14 +36,12 @@ export const RedisListener = ({title, stream_id} : IRedisListenerProps) => {
         setConnected(true);
     };
 
-
-    socket_client.on('connect', () => {
-            console.log(`Socket[${socket_client.id}] conectado para MyId[${myId}] e Stream[${stream_id}].`);
-            if(stream_id !== undefined && !connected){
-                joinRoom();
-            }
-        }
-    );
+    useEffect(() => {
+        console.log(`Socket[${socket_client.id}] conectado para MyId[${myId}] e Stream[${stream_id}].`);
+        if(stream_id !== undefined && !connected){
+            joinRoom();
+        }       
+    }, [socket_client]);
 
     useEffect(() => {
         console.log("useEffect::", stream_id);

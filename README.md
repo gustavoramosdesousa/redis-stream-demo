@@ -4,21 +4,40 @@
   <img  width="70%" 
     src="https://github.com/gustavoramosdesousa/redis-stream-demo/blob/main/images/redis-stream-demo.png" alt="redis-arch" />
   <p>Arquitetura da Demonstração</p>
+  <br/>
+  <img  width="70%" 
+    src="https://github.com/gustavoramosdesousa/redis-stream-demo/blob/main/images/redis-stream-demo-tela-inicial.png" alt="redis-arch" />
+  <p>Tela inicial da aplicação (em construção)</p>
+
+
+
 </div>
 
 
 ### Sobre o projeto
-<em_breve_DESCRICAO_DO_PROJETO>
-<!--
-Trata-se de uma aplicação de demonstração que se propõe a integrar os serviços do Firebase (versão superior a 9) com ReactJS. O diferencial do projeto é que ele é totalmente tipado, fazendo forte uso do TypeScript. 
--->
+Trata-se de uma aplicação de demonstração que se propõe a criar um _producer_ de mensagens (React.js) para ser consumido por vários _consumers_ (Node.js, Java e Python), utilizando a estrutura de dados Stream, do Redis. Todas as mensagens também são salvas no Firebase, como banco de dados da aplicação FrontEnd.
+
+Como diferencial, o projeto se utiliza de WebSockets para atualizar o frontend (_producer_ feito em React.js) sempre que os streams do Redis forem atualizados, mesmo que esta atualização não parta do frontend, além de demonstrar a conexão de outras tecnologias com o Redis (Java e Python). O projeto totalmente tipado, fazendo forte uso do TypeScript.
+
 ##### Funcionalidades
-<em_breve_FUNCIONALIDADES_DO_PROJETO>
-<!--
-- Salvar documentos no firebase (utilizando [addDoc](https://firebase.google.com/docs/reference/js/firestore_?hl=pt-br#adddoc));
-- Recuperar documentos via chamada síncrona (utilizando [getDocs](https://firebase.google.com/docs/reference/js/firestore_?hl=pt-br#getdocs));
-- Recuperar documento de forma automática (utilizando [onSnapShot](https://firebase.google.com/docs/reference/js/firestore_?hl=pt-br#onsnapshot)).
--->
+- **_Producer_: FrontEnd em React.js**
+  - Salvar registros no firebase (simular funcionamento da aplicação frontend); ✅
+  - Transmitir registros para Stream Redis (via WebSocket para Node.js); ✅
+  - Recuperar registros do Redis de forma automática; ✅
+  - Mostrar status de utilização dos streams; ⏳
+- **_Producer_: BackEnd em Node.js**
+  - Receber registros para Stream Redis (via WebSocket pelo React.js); ✅
+  - Recuperar registros do Redis e enviá-los para FrontEnd; ✅
+  - Aplicar filtro (regra de negócio) aos registros do recuperados do Redis e enviá-los para uma nova fila temporária no Redis; ⏳
+
+- **_Consumers_: BackEnd Java**
+  - Integração com Redis; ⏳
+  - Recuperar registros do Redis e atualizar Firebase com último estado do registro; ⏳
+
+- **_Consumers_: BackEnd Python**
+  - Integração com Redis; ⏳
+  - Recuperar registros do Redis e logar no console; ⏳
+
 ##### Tecnologias Utilizadas
  ![TypeScript](https://img.shields.io/badge/-TypeScript-blue?style=flat&logo=typescript&logoColor=white) | ![ReactJS](https://img.shields.io/badge/-ReactJs-0A1A2F?style=flat&logo=react) ![Next.js](https://img.shields.io/badge/-Next.js-0A1A2F?style=flat&logo=next.js) ![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=black) | ![NodeJS](https://img.shields.io/badge/-Node.Js-green?style=flat&logo=node) ![Express.JS](https://img.shields.io/badge/-Express.Js-0A1A2F?style=flat&logo=express)
 <br/>
