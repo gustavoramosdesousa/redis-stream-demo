@@ -30,4 +30,8 @@ yarn add @types/uuid -D
 
 yarn add socket.io-client
 
+yarn add firebase
+yarn add @types/firebase -D
+
+
 ```

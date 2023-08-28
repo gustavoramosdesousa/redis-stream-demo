@@ -3,7 +3,7 @@ import { Application } from 'express-serve-static-core';
 import cors from 'cors';
 import path from 'node:path';
 import { ApiRoutes } from './routes/api.routes';
-import { SocketRoutes } from './routes/socket.routes';
+import { SocketRoutes } from './services/socket.service';
 
 /*
 import { connectMongoDB } from './infra/mongoDB';
